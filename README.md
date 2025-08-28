@@ -43,7 +43,9 @@ Pastikan sudah membuat App Password di Google Account, bukan password Gmail bias
 # Menjalankan Queue
 Beberapa fitur (seperti notifikasi email) berjalan di background.
 Gunakan perintah berikut untuk menjalankan queue worker:
+```
 php artisan queue:work
+```
 
 # Autentikasi API
 Header Wajib
@@ -54,18 +56,23 @@ Authorization: Bearer <Token>
 ```
 
 # Endpoint utama:
+```
 POST /register → Register user baru
 POST /login → Login & dapatkan token
 POST /logout → Logout user
 GET /profile → Ambil profil user (beserta postingan & bookmark)
-
+```
 Jika menggunakan form-data, untuk update gunakan
+```
 _method: PUT
-
+```
 # Reset Password
+```
 POST /forgot-password → Kirim link reset password ke email
 POST /reset-password → Reset password dengan token
-
+```
 # Note Tambahan
+```
 1.API ini dirancang untuk dijalankan secara local development (127.0.0.1:8000).
 2.Gunakan Postman untuk testing dengan menambahkan header sesuai instruksi.
+```
