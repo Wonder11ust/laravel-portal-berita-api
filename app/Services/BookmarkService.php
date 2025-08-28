@@ -19,7 +19,7 @@ class BookmarkService
 
     public function addBookmark($postId)
     {
-        $user = $this->userService->getCurrentUser(); // misalnya wrapper dari Auth::user()
+        $user = $this->userService->getCurrentUser();
         $post = $this->postService->getArticle($postId);
 
         if (!$post) {

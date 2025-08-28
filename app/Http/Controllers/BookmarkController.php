@@ -63,9 +63,6 @@ class BookmarkController extends Controller
 
     public function index(Request $request)
     {
-        // $user = Auth::user();
-        // $bookmarks = $user->bookmarks()->whereNull('posts.deleted_at')->paginate(10);
-        // return PostResource::collection($bookmarks);
         $perPage = $request->get('per_page', 10);
         $bookmarks = $this->bookmarkService->listBookmarks($perPage);
 
